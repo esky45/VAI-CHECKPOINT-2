@@ -12,8 +12,7 @@ app.use(bodyParser.json());
 
 // Simple user validation function
 function validateUser(username, password) {
-    // Perform your validation logic here
-    // For example, check if the username and password meet certain criteria
+    password lenght check
     return username.length >= 3 && password.length >= 8;
 }
 
@@ -23,8 +22,7 @@ app.post('/signup', (req, res) => {
 
     // Validate the user on the server
     if (validateUser(username, password)) {
-        // If validation passes, process the data (e.g., save to a database)
-        // Replace the following line with your processing logic
+
         res.send('User registration successful!');
     } else {
         // If validation fails, return an error response
